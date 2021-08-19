@@ -9,9 +9,10 @@ public class Czlowiek {
     private boolean czyKobieta;
     private boolean czyPrawoJazdy;
     private final int PROG_OTYLOSCI = 120;
+    private double ilePieniedzy;
 
     public Czlowiek(String imie, String nazwisko, String kolorOczu, int wzrost, int waga, boolean czyKobieta,
-                    boolean czyPrawoJazdy) {
+                    boolean czyPrawoJazdy, double ilePieniedzy ) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.kolorOczu = kolorOczu;
@@ -19,6 +20,7 @@ public class Czlowiek {
         this.waga = waga;
         this.czyKobieta = czyKobieta;
         this.czyPrawoJazdy = czyPrawoJazdy;
+        this.ilePieniedzy = ilePieniedzy;
     }
 
     public boolean czyMaszNadwage() {
@@ -44,6 +46,20 @@ public class Czlowiek {
         this.nazwisko = nazwisko;
     }
 
+    public boolean isCzyPrawoJazdy() {
+        return czyPrawoJazdy;
+    }
+
+    public void setCzyPrawoJazdy(boolean czyPrawoJazdy) {
+        this.czyPrawoJazdy = czyPrawoJazdy;
+    }
+    public double ilePieniedzy(){
+        return ilePieniedzy;
+    }
+    public void ilePieniedzy(double ilePieniedzy) {
+        this.ilePieniedzy = ilePieniedzy;
+    }
+
     public String getKolorOczu() {
         return kolorOczu;
     }
@@ -61,7 +77,7 @@ public class Czlowiek {
         StringBuilder sb = new StringBuilder();
         sb.append(imie).append("\n").append(nazwisko).append("\n").append("kolor oczu: ").append(kolorOczu)
                 .append("\n").append("wzrost:").append(wzrost).append("\n")
-                .append("waga:").append(waga).append("\n").append("płeć ");
+                .append("waga:").append(waga).append("\n").append("płeć ").append("\n").append("Pieniadze: ").append(ilePieniedzy);
         if (czyKobieta) {
             sb.append("kobieta");
         } else {
