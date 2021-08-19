@@ -7,19 +7,22 @@ public class Czlowiek {
     private int wzrost;
     private int waga;
     private boolean czyKobieta;
+    private boolean czyPrawoJazdy;
     private final int PROG_OTYLOSCI = 120;
 
-    public Czlowiek(String imie, String nazwisko, String kolorOczu, int wzrost, int waga, boolean czyKobieta) {
+    public Czlowiek(String imie, String nazwisko, String kolorOczu, int wzrost, int waga, boolean czyKobieta,
+                    boolean czyPrawoJazdy) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.kolorOczu = kolorOczu;
         this.wzrost = wzrost;
         this.waga = waga;
         this.czyKobieta = czyKobieta;
+        this.czyPrawoJazdy = czyPrawoJazdy;
     }
 
-    public boolean czyMaszNadwage(){
-        if(this.waga > PROG_OTYLOSCI)
+    public boolean czyMaszNadwage() {
+        if (this.waga > PROG_OTYLOSCI)
             return true;
         else
             return false;
@@ -55,17 +58,22 @@ public class Czlowiek {
 
     @Override
     public String toString() {
-        StringBuilder sb= new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         sb.append(imie).append("\n").append(nazwisko).append("\n").append("kolor oczu: ").append(kolorOczu)
                 .append("\n").append("wzrost:").append(wzrost).append("\n")
                 .append("waga:").append(waga).append("\n").append("płeć ");
-        if(czyKobieta){
+        if (czyKobieta) {
             sb.append("kobieta");
-        }else {
+        } else {
             sb.append("mężczyzna");
         }
+        sb.append("\n");
+        if (czyPrawoJazdy) {
+            sb.append("ma prawo jazdy");
+        } else {
+            sb.append("nie ma prawa jazdy");
+        }
         return sb.toString();
-
     }
 
     public void setWzrost(int wzrost) {
