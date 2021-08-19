@@ -1,8 +1,17 @@
-package com.company;
+package pl.justynkailuis;
 
-import com.company.lekcja2.*;
+import pl.justynkailuis.dziedziczenie.Jelen;
+import pl.justynkailuis.dziedziczenie.Kot;
+import pl.justynkailuis.dziedziczenie.Orka;
+import pl.justynkailuis.dziedziczenie.Zwierze;
+import pl.justynkailuis.lekcja2.Czlowiek;
+import pl.justynkailuis.lekcja2.Miasto;
+import pl.justynkailuis.lekcja2.Podroz;
+import pl.justynkailuis.lekcja2.Samochod;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -19,8 +28,10 @@ public static double cenaPaliwa = 5.40;
         Miasto turyn = new Miasto(22990, "turyn", new Point(0, 0));
         Miasto reczpol = new Miasto(1223340, "reczpol", new Point(3, 4));
 
-        Kot jamnik = new Kot(" jamnik", "czarny", "spaslak");
-        Kot dzastin = new Kot(" dzastin", "blond", "chudy");
+        Kot jamnik = new Kot("mały" ,"polko" ," jamnik", "czarny", "spaslak");
+        Kot dzastin = new Kot("duży","domek", " dzastin", "blond", "chudy");
+        dzastin.usiadz(daniel);
+        /*
         Kot kjut = new Kot(" kjut", "czarny", "chudy");
         Kot melman = new Kot(" melman", "rudy", "spaslak");
         Kot andzik = new Kot(" andzik", "czarny", "chudy");
@@ -30,6 +41,22 @@ public static double cenaPaliwa = 5.40;
         Kot klaudzik = new Kot(" klaudzik", "blond", "chudy");
         Kot lui = new Kot(" lui", "blond", "chudy");
 
+
+         */
+        Jelen wlodek = new Jelen("średni","bujne");
+        wlodek.szarzuj(jamnik);
+        Orka basia = new Orka("mała", "Czerwone");
+        basia.plyn("ocean", 4);
+        List<Zwierze> zwierzeta=new ArrayList<>();
+        zwierzeta.add(jamnik);
+        zwierzeta.add(dzastin);
+        zwierzeta.add(wlodek);;
+        zwierzeta.add(basia);
+        for (Zwierze z: zwierzeta){
+            z.dajGlos();
+
+
+        }
         Samochod samochod = new Samochod("ford","focus","srebrny",2002, 5, 8, 8 );
         Podroz sca = new Podroz(turyn, reczpol, samochod);
         System.out.println(sca.obliczOdleglosc());
@@ -44,6 +71,7 @@ public static double cenaPaliwa = 5.40;
         //System.out.println(magda.czyMaszNadwage());
         samochod.dodajpasazerKot( jamnik);
         samochod.dodajpasazerKot( dzastin);
+        /*
         samochod.dodajpasazerKot( kjut);
         samochod.dodajpasazerKot( melman);
         samochod.dodajpasazerKot( andzik);
@@ -53,6 +81,8 @@ public static double cenaPaliwa = 5.40;
         samochod.dodajpasazerKot( klaudzik);
         samochod.dodajpasazerKot( lui);
 
+
+         */
     }
 
 }

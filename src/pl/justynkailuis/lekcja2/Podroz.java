@@ -1,4 +1,4 @@
-package com.company.lekcja2;
+package pl.justynkailuis.lekcja2;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;

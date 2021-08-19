@@ -1,4 +1,4 @@
-package com.company.lekcja2;
+package pl.justynkailuis.lekcja2;
 
 public class Czlowiek {
     private String imie;

@@ -1,4 +1,4 @@
-package com.company.lekcja1;
+package pl.justynkailuis.lekcja1;
 
 public class Justynka {
     public void lekcja(){

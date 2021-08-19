@@ -1,4 +1,6 @@
-package com.company.lekcja2;
+package pl.justynkailuis.lekcja2;
+
+import pl.justynkailuis.dziedziczenie.Kot;
 
 public class Samochod {
     private String marka;
