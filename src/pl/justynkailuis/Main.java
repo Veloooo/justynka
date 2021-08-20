@@ -30,7 +30,7 @@ public static double cenaPaliwa = 5.40;
 
         Kot jamnik = new Kot("mały" ,"polko" ," jamnik", "czarny", "spaslak");
         Kot dzastin = new Kot("duży","domek", " dzastin", "blond", "chudy");
-        dzastin.usiadz(daniel);
+        dzastin.usiadz(luis);
         /*
         Kot kjut = new Kot(" kjut", "czarny", "chudy");
         Kot melman = new Kot(" melman", "rudy", "spaslak");
